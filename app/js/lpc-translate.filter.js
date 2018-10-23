@@ -3,8 +3,7 @@
 angular.module('LpcWebTest2017')
     .filter('lpcTranslate',['LpcTranslateService','$rootScope',function(LpcTranslateService,$rootScope){
         //TODO
-        var promise = LpcTranslateService.loadProperties()
-        promise.then(res=> {
+        LpcTranslateService.loadProperties().then(res=> {
             $rootScope.properties  = res.data; 
         })
         
